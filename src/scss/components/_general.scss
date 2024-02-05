@@ -1,0 +1,60 @@
+.logo {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: var(--gray-900);
+
+  &--home{
+    color: var(--white);
+  }
+
+  span{
+    color: var(--primary);
+  }
+}
+
+.main-description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--gray-700);
+
+  &--home{
+    color: var(--white);
+  }
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 3.25;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 0px 40px;
+  color: var(--white);
+}
+.btn--stroke {
+  border: 1px solid var(--white);
+}
+.btn--fill-light {
+}
+.btn--fill {
+  background: var(--primary);
+}
+
+

@@ -3,6 +3,7 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+@import "./components/general";
 
 // подключения компонентов страницы (большие компоненты)
 @import "./components/header";
@@ -10,5 +11,7 @@
 // подключения компонентов страницы (маленькие компоненты)
 @import "./components/nav";
 @import "./components/header-contacts";
+@import "./components/hero";
+
 
 
