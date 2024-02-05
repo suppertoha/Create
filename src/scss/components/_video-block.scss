@@ -1,0 +1,51 @@
+.video-block {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  height: 500px;
+
+  position: relative;
+  &:before{
+    content: '' ;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    background: var(--gray-900);
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  &__play {
+    @include flex-all-center;
+
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    svg{
+      fill: var(--white);
+      width: 26px;
+      height: 26px;
+      margin-left: 7px;
+    }
+  }
+
+  &__content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

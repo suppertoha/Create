@@ -1,0 +1,56 @@
+.mission {
+  background: var(--white);
+
+  &__items {
+    --mission-gap: 94px;
+    display: grid;
+    grid-gap: calc(var(--mission-gap) * 2);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    padding-top: 77px;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    &:not(:first-child){
+      &::after{
+        content: '' ;
+        display: inline-block;
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        left: calc(-1 * (var(--mission-gap)));
+        background: url(../img/divider.svg) no-repeat center / cover;
+      }
+    }
+
+
+    &--quality {
+      background-image: url(../img/like.svg);
+    }
+
+    &--safety {
+      background-image: url(../img/hand.svg);
+    }
+
+    &--comfort {
+      background-image: url(../img/slippers.svg);
+    }
+  }
+
+
+
+  &__title {
+    margin-bottom: 13px;
+  }
+
+  &__descr {
+  }
+
+
+}
+
