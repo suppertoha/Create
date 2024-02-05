@@ -1,0 +1,38 @@
+.header-contacts {
+  @include  flex-v-center;
+  margin-left: auto;
+
+}
+.contacts-link {
+  @include flex-direction-col;
+  padding-left: 50px;
+
+  &:not(:last-child){
+    margin-right: 35px;
+  }
+
+
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  &--phone{
+    background-image: url(../img/phone.svg);
+  }
+
+  &--chat{
+    background-image: url(../img/chat.svg);
+  }
+  &__captcha {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gray-800);
+  }
+
+  &__value {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--gray-900);
+  }
+}

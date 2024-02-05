@@ -1,0 +1,21 @@
+.header {
+  padding: 23px 0;
+
+  &--main{
+
+  }
+
+  &__container {
+    @include  flex-v-center;
+  }
+
+  &__logo{
+    margin-right: 60px;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
