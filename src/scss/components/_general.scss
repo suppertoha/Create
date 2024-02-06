@@ -35,7 +35,7 @@
 .btn {
   font-weight: 700;
   font-size: 16px;
-  line-height: 3.25;
+  line-height: 1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
@@ -45,7 +45,7 @@
   justify-content: flex-start;
   flex-direction: column;
   border-radius: 4px;
-  padding: 0px 40px;
+  padding: 18px 39px;
   color: var(--white);
 }
 .btn--stroke {
@@ -84,7 +84,7 @@
   padding-top: 120px;
 }
 
-.sub-title{
+.subtitle{
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
@@ -99,6 +99,16 @@
   font-size: 16px;
   line-height: 160%;
   color: var(--gray-700);
+  &--center {
+    text-align: center;
+  }
+}
+
+.subtitle-big {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--gray-900);
   &--center {
     text-align: center;
   }

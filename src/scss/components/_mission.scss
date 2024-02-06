@@ -1,11 +1,11 @@
 .mission {
   background: var(--white);
-  padding-bottom: 300px;
   &__items {
     --mission-gap: 94px;
     display: grid;
     grid-gap: calc(var(--mission-gap) * 2);
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
   }
 
   &__item {
@@ -13,7 +13,6 @@
     background-position: top center;
     background-repeat: no-repeat;
 
-    position: relative;
     &:not(:first-child){
       &::after{
         content: '' ;
@@ -53,4 +52,57 @@
 
 
 }
+
+.know-form {
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 80px 80px -20px rgba(154, 156, 165, 0.08);
+  background: var(--white);
+  padding: 43px 60px;
+  position: relative;
+  top: 105px;
+
+  &__title{
+    margin-bottom: 37px;
+  }
+
+  &__content {
+    @include flex-all-end;
+    gap: 24px;
+  }
+
+  &__field {
+    min-width: 260px;
+  }
+}
+
+
+.form-field {
+  @include flex-direction-col;
+
+  &--big{
+    flex-grow: 1;
+    .form-field__input{
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-800);
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    border: 1px solid var(--gray-400);
+    border-radius: 4px;
+    padding: 12px 16px;
+    background: var(--gray-200);
+    width: 100%;
+  }
+
+  &__btn {
+    padding: 14px 30px;
+  }
+}
+
 
