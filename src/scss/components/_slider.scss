@@ -1,11 +1,11 @@
-.portfolio-section {
+.portfolio-section,.slider-reviews {
   &__next {
     transform: rotate(-180deg);
   }
+}
 
-  &__explore{
-    margin-top: 0;
-  }
+.swiper-button-lock {
+  display: block;
 }
 
 .slider-nav {
@@ -23,6 +23,8 @@
     display: flex;
     margin-bottom: -14px;
     margin-right: -9px;
+    position: relative;
+    z-index: 15;
   }
 
   &__btn {
@@ -49,9 +51,18 @@
 }
 
 .slider-cards{
-  padding-bottom: 80px;
+  margin: -100px;
+  padding: 100px;
+
+  .swiper-slide{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .slider-visible{
+    opacity: 1;
+    visibility: visible;
+  }
 }
-
-
 
 

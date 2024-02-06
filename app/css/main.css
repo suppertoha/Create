@@ -317,7 +317,7 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   gap: 40px;
-  margin-top: 75px;
+  margin-top: 80px;
 }
 
 .header {
@@ -533,6 +533,10 @@ a {
   transition: 0.3s;
 }
 
+.portfolio-section {
+  padding-bottom: 120px;
+}
+
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -692,13 +696,14 @@ a {
   padding: 14px 30px;
 }
 
-.portfolio-section__next {
+.portfolio-section__next, .slider-reviews__next {
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
-.portfolio-section__explore {
-  margin-top: 0;
+
+.swiper-button-lock {
+  display: block;
 }
 
 .slider-nav {
@@ -724,6 +729,8 @@ a {
   display: flex;
   margin-bottom: -14px;
   margin-right: -9px;
+  position: relative;
+  z-index: 15;
 }
 .slider-nav__btn {
   width: 48px;
@@ -749,7 +756,16 @@ a {
 }
 
 .slider-cards {
-  padding-bottom: 80px;
+  margin: -100px;
+  padding: 100px;
+}
+.slider-cards .swiper-slide {
+  opacity: 0;
+  visibility: hidden;
+}
+.slider-cards .slider-visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .card {
@@ -801,5 +817,75 @@ a {
 .card__btn {
   padding: 14px 32px;
   font-size: 14px;
+}
+
+.partners {
+  background: var(--gray-200);
+  padding: 80px 0;
+}
+.partners__list {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 102px;
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 58px;
+}
+
+.reviews {
+  padding: 95px 0;
+  background: var(--gray-200);
+}
+.reviews__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.slider-reviews {
+  position: relative;
+  width: 600px;
+  margin-left: 0;
+}
+.slider-reviews__slider-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin-bottom: 0;
+}
+.slider-reviews__title {
+  margin-bottom: 61px;
+}
+.slider-reviews__img {
+  border-radius: 100%;
+  overflow: hidden;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 25px;
+}
+.slider-reviews__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+}
+.slider-reviews__name {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--gray-900);
+  margin-bottom: 5px;
+}
+.slider-reviews__name-position {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--gray-700);
 }
 /*# sourceMappingURL=main.css.map */
