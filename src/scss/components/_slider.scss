@@ -1,0 +1,57 @@
+.portfolio-section {
+  &__next {
+    transform: rotate(-180deg);
+  }
+
+  &__explore{
+    margin-top: 0;
+  }
+}
+
+.slider-nav {
+  @include flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 60px;
+
+  &__title {
+    max-width: 710px;
+    margin-bottom: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-bottom: -14px;
+    margin-right: -9px;
+  }
+
+  &__btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    transition: 0.3s;
+    svg{
+      width: 18px;
+      height: 11px;
+      fill: var(--gray-800);
+      transition: 0.3s;
+    }
+
+    @media screen and (min-width: 1024px) {
+      &:hover{
+        background: var(--primary);
+        svg{
+          fill: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.slider-cards{
+  padding-bottom: 80px;
+}
+
+
+
+

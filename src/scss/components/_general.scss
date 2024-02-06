@@ -51,6 +51,11 @@
 .btn--stroke {
   border: 1px solid var(--white);
 }
+
+.btn-stroke--primary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
 .btn--fill-light {
 }
 .btn--fill {
@@ -112,6 +117,12 @@
   &--center {
     text-align: center;
   }
+}
+
+.center-flex-button{
+  @include flex-all-center;
+  gap: 40px;
+  margin-top: 75px;
 }
 
 
