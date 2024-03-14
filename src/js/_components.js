@@ -1,2 +1,2 @@
 import './components/slider';
-console.log('components');
+import './components/progress';

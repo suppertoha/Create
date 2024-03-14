@@ -1,5 +1,5 @@
 .reviews {
-  padding: 95px 0;
+  padding: 95px 0 0 0;
   background: var(--gray-200);
 
   &__items {
@@ -8,20 +8,27 @@
   }
 
   &__image {
+    margin-bottom: -60px;
+    position: relative;
+    z-index: 9;
   }
 }
 
 .slider-reviews {
   position: relative;
-  width: 600px;
+  width: 610px;
   margin-left: 0;
+  padding-bottom: 10px;
 
   &__slider-nav {
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: 10;
-    margin-bottom: 0;
+    margin: 0;
+    .slider-nav__buttons{
+      margin: 0;
+    }
   }
 
   &__title{
@@ -51,6 +58,7 @@
     line-height: 160%;
     color: var(--gray-900);
     margin-bottom: 5px;
+    max-width: 80%;
   }
 
   &__name-position {
@@ -59,5 +67,6 @@
     font-size: 14px;
     line-height: 150%;
     color: var(--gray-700);
+    max-width: 80%;
   }
 }

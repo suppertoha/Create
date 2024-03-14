@@ -40,7 +40,7 @@
   text-transform: uppercase;
   text-align: center;
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
@@ -125,5 +125,14 @@
   margin-top: 80px;
 }
 
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
 
+.centered {
+  width: 100%;
+  text-align: center;
+}
 

@@ -10,8 +10,10 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
+/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/progress */ "./src/js/components/progress.js");
+/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_progress__WEBPACK_IMPORTED_MODULE_1__);
 
-console.log('components');
+
 
 /***/ }),
 
@@ -147,6 +149,27 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/progress.js":
+/*!***************************************!*\
+  !*** ./src/js/components/progress.js ***!
+  \***************************************/
+/***/ (() => {
+
+const circle = document.querySelectorAll('.facts-element__circle');
+circle.forEach(el => {
+  const percentageProgress = Math.floor(el.dataset.percent);
+  progressAnimation(el, percentageProgress);
+});
+function progressAnimation(element, progress) {
+  const elementCircle = element.querySelector('.progress');
+  const radius = elementCircle.getAttribute('r');
+  const circleLength = 2 * Math.PI * radius;
+  elementCircle.setAttribute('stroke-dasharray', circleLength);
+  elementCircle.setAttribute('stroke-dashoffset', circleLength - circleLength * progress / 100);
+}
+
+/***/ }),
+
 /***/ "./src/js/components/slider.js":
 /*!*************************************!*\
   !*** ./src/js/components/slider.js ***!
@@ -210,6 +233,7 @@ initSwipers();
 const portSlider = document.querySelector('.slider-reviews');
 const swiperReviews = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](portSlider, {
   slidesPerView: 1,
+  loop: true,
   spaceBetween: 30,
   navigation: {
     nextEl: '.slider-reviews__next',

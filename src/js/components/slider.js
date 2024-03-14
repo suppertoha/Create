@@ -64,6 +64,7 @@ const portSlider = document.querySelector('.slider-reviews');
 
 const swiperReviews = new Swiper(portSlider, {
   slidesPerView: 1,
+  loop: true,
   spaceBetween: 30,
   navigation: {
     nextEl: '.slider-reviews__next',

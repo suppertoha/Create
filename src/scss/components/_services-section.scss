@@ -6,16 +6,12 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
 
-.services-section {
-
-  &__items {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(4, 1fr);
+  &__item{
+    grid-column: 3 span;
   }
 }
+
 
 .services-item {
   @include flex-all-center;
